@@ -1,0 +1,15 @@
+{{yield}}
+
+<ul>
+  {{#each model as |announcement|}}
+    <li>{{announcement.title}} <br> {{announcement.message}}</li>
+  {{/each}}
+    <li>{{announcement.title}} <br> {{announcement.message}}
+    {{#if isImageShowing }}
+       <p><img src={{announcement.image}} alt={{announcement.type}} {{action 'imageHide'}}></p>
+     {{else}}
+       <button {{action 'imageShow'}}>Show image</button>
+    {{/if}}
+     <button {{action 'delete' announcement}}>Delete</button>
+</li>
+</ul>

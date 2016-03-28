@@ -1,0 +1,18 @@
+<h1>Announcement</h1>
+
+<!-- <ul>
+  {{#each model as |announcement|}}
+     <li><strong>{{announcement.title}}</strong><br>{{announcement.message}}</li>
+  {{/each}}
+</ul> -->
+
+<ul>
+  {{#each model as |announcement|}}
+    {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
+  {{/each}}
+</ul>
+
+{{new-announcement save2="save3"}}
+
+{{#link-to 'contact'}}Contact Us{{/link-to}}<br>
+{{#link-to 'about'}}About{{/link-to}}
