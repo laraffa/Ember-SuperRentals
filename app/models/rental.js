@@ -6,4 +6,4 @@ export default DS.Model.extend({
     type: DS.attr(),
     image: DS.attr(),
     bedrooms: DS.attr()
-})
+});
